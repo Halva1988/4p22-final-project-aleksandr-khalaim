@@ -7,7 +7,7 @@ function Header() {
             <div className="header__tittle">PCS Frontend</div>
             <div className="header__link">
                 <a href="./registration/pageReg.html" class="header__registration">Регистрация</a>
-                <a href="" class="header__login">Вход</a>
+                <a href="#" class="header__login">Вход</a>
             </div>
         </header>
     )

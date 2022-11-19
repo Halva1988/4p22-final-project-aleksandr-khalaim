@@ -1,0 +1,81 @@
+@import './base';
+@import './wrapper.scss';
+
+.card {
+    height: 368px;
+    width: 246px;
+    background-color: #dbd6d6;
+    box-shadow: 4px 4px 4px 0px #0000001A;
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: -webkit-center;
+
+		&__buy-now {
+            width: 100%;
+            font-family: Inter;
+            font-size: 18px;
+            font-weight: 400;
+            text-align: center;
+            background-color: #2F7BB2;
+            color: #FFFFFF;
+            transition: 0.8s;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+		}
+
+        &__buy-now:hover {
+            background-color: #4594cd;
+            transition: 0.8s;
+        }
+}
+
+.card:hover {
+    scale: 1.02;
+    transition: 0.4s;
+    background-color: #d0c3c3;
+    box-shadow: 10px 10px 10px 0px #0000004c;
+}
+
+.card-foto {
+    zoom: 0.5;
+    align-self: center;
+    margin: 37px 41px 18px;
+}
+
+.card-title {
+    font-family: 'Inter';
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.card-desc {
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.card-price {
+    font-family: 'Inter';
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: #2F7BB2;
+    margin-bottom: 38px;
+}
+
+.card-button {
+    display: flex;
+    align-self: center;
+    height: 63px;
+    width: 80%;
+    border: none;
+    cursor: pointer;
+}
