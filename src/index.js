@@ -1,16 +1,12 @@
+import './components/style/_base.scss';
+import './components/style/_wrapper.scss';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Header from './components/header';
-import FormRegistration from './components/formRegistration';
-import Cards from './components/Card';
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <>
-        <Header />
-        {/* <FormRegistration /> */}
-        <Cards />
-    </>
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
 );
-
-
