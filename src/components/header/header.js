@@ -1,9 +1,7 @@
 import './_header.scss';
 import React from 'react';
 
-
 export default function Header() {
-
 
     return (
         <header className="header">
@@ -14,6 +12,7 @@ export default function Header() {
             </div>
             <div className="header__link">
                 <a href="/" className="header__login">Sign in</a>
+                <a href="/" className="header__login">Registration</a>
             </div>
         </header>
     )

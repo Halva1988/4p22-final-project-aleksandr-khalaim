@@ -9,17 +9,16 @@ function DataFilms() {
     React.useEffect(() => {
         const options = {
             method: 'GET',
-            url: 'https://flixster.p.rapidapi.com/movies/get-popularity',
-            params: { zipCode: '90002', radius: '50' },
+            url: 'https://imdb-top-100-movies.p.rapidapi.com/premiummovies', ///top1
             headers: {
                 'X-RapidAPI-Key': 'edce1c7d00msh8a8c0b21742b59ap16e40djsn49ab80f12563',
-                'X-RapidAPI-Host': 'flixster.p.rapidapi.com'
+                'X-RapidAPI-Host': 'imdb-top-100-movies.p.rapidapi.com'
             }
         };
 
         axios.request(options).then(function (response) {
-            setProducts(response.data.data.popularity);
-            console.log(response.data.data.popularity);
+            setProducts(response.data);
+            console.log(response.data);
         }).catch(function (error) {
             console.error(error);
         });
@@ -29,17 +28,13 @@ function DataFilms() {
         <div className="wrapper">
             {
                 films.map((item, index) => {
-                    if (item.name === '' || item.posterImage.url === null) {
-                        return
-                    } else {
-                        return <Cards
-                            key={index}
-                            image={item.posterImage.url}
-                            name={item.name}
-                            popularity={item.sortPopularity}
-                            ems={item.sortEms}
-                        />
-                    }
+                    return <Cards
+                        key={index}
+                        image={item.image}
+                        name={item.title}
+                        popularity={item.rank}
+                        imdb={item.rating}
+                    />
                 })
             }
         </div>
