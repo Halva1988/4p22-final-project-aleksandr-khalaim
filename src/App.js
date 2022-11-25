@@ -8,7 +8,7 @@ import FilmPage from "./pages/Film/Film";
 
 function App() {
     return (
-        <HashRouter>
+        <>
             <Routes>
                 <Route path={'/'} element={<DefaultLayout/>}>
                     <Route index element={<DataFilms />} />
@@ -17,7 +17,7 @@ function App() {
                     </Route>
                 </Route>
             </Routes>
-        </HashRouter>
+        </>
     );
 }
 
