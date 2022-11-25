@@ -1,0 +1,69 @@
+@import '../../components/style/size';
+@import '../../components/style/color';
+
+.wrapper-film {
+    max-width: 1280px;
+    padding: calc(120 / 1440 * 100vw) 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Inter';
+    font-weight: 700;
+    color: $wight;
+
+}
+
+.wrapper-description {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height: auto;
+    
+}
+
+.film-foto {
+    width: 25%;
+}
+
+.film-title {
+    text-align: center;
+    font-size: $titleBigCard;
+    text-decoration: underline;
+}
+
+.film-year {
+    margin-top: 20px;
+}
+
+.film-genre {
+    margin-top: 20px;
+}
+
+.film-description {
+    margin-top: 20px;
+    width: 80%;
+}
+
+.btn-buy {
+    width: 30%;
+    height: 40px;
+    margin-top: auto;
+    background-color: rgba(235, 165, 1, 0.838);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .3s ease;
+
+    &:hover {
+        background-color: rgba(211, 149, 3, 0.838);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        background-color: rgba(103, 74, 4, 0.838);
+        color: rgb(7, 233, 78);
+
+    }
+}

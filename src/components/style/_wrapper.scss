@@ -1,10 +1,19 @@
 @import './base';
 
 .wrapper {
-    max-width: 1280px;
-    padding: 120px 20px;
+    max-width: 1440px;
+    padding: calc(120 / 1440 * 100vw) 20px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 80px;
+    justify-content: space-between;
+    gap: calc(40 / 1440 * 100vw);
+}
+
+
+@media (max-width: 1024px) {
+    .wrapper {
+        column-gap: calc(100 / 1024 * 100vw);
+        padding: calc(120 / 1024 * 100vw) calc(80 / 1024 * 100vw);
+    }
 }

@@ -8,8 +8,8 @@
     font-family: 'Inter';
     font-weight: 700;
     position: relative;
-    height: 490px;
-    width: 250px;
+    height: calc(490 / 1440 * 100vw);
+    width: calc(250 / 1440 * 100vw);
     background-color: $lightGrey;
     box-shadow: 4px 4px 4px 0px #0000001A;
     display: flex;
@@ -20,6 +20,9 @@
     overflow: hidden;
     cursor: pointer;
     transition: all 0.4s ease;
+    text-decoration: none;
+    z-index: 1;
+
 
     &:hover {
         scale: 1.02;
@@ -27,27 +30,31 @@
         background-color: #d0c3c3;
         box-shadow: 10px 10px 10px 0px #0000004c;
     }
+}
 
+.linkCard {
+    text-decoration: none;
 }
 
 .card-foto {
     width: 100%;
-    height: 370px;
-    margin-bottom: 5px;
+    height: calc(370 / 1440 * 100vw);
+    margin-bottom: calc(1 / 375 * 100vw);
 }
 
 .card-title {
     font-size: $titleCard;
     line-height: 0.8;
-    padding: 0 10px;
+    padding: 0 calc(10 / 420 * 100vw);
     text-align: center;
     margin-bottom: 8px;
+    color: $dark;
 }
 
 .card-popular {
     position: absolute;
-    left: 10px;
-    bottom: 5px;
+    left: calc(10 / 1440 * 100vw);
+    bottom: calc(5 / 1440 * 100vw);
     font-size: $inputFontSize;
     color: #2F7BB2;
 }
@@ -59,3 +66,25 @@
     color: $red;
 }
 
+.btn-favorite {
+    background-image: url('../../img/Cards/Favorite.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 90% 90%;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    width: calc(30 / 1440 * 100vw);
+    height: calc(30 / 1440 * 100vw);
+    top: 5px;
+    left: 5px;
+    z-index: 99;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:active {
+        
+    }
+}
