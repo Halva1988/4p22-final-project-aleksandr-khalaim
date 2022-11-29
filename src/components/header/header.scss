@@ -24,8 +24,8 @@
     }
 
     &__basket {
-        width: 30px;
-        height: 30px;
+        width: calc(30 / 1440 * 100vw);
+        height: calc(30 / 1440 * 100vw);
     }
 
     &__link {
@@ -47,4 +47,14 @@
 
 .basket-wrapper {
     display: flex;
+    text-decoration: none;
+    position: relative;
+}
+
+.basketCount {
+    position: absolute;
+    color: red;
+    left: calc(-20 / 1440 * 100vw);
+    top: calc(-9 / 1440 * 100vw);
+    cursor: default;
 }
