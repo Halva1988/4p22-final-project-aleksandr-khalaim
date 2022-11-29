@@ -1,7 +1,7 @@
 @import '../../components/style/size';
 @import '../../components/style/color';
 
-.wrapper-film {
+.wrapper-product {
     max-width: 1280px;
     padding: calc(120 / 1440 * 100vw) 10px;
     margin: 0 auto;
@@ -9,7 +9,17 @@
     justify-content: space-between;
     font-family: 'Inter';
     font-weight: 700;
-    color: $wight;
+    color: rgb(0, 1, 0);
+}
+
+.product-border {
+    padding: calc(20 / 1440 * 100vw) 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 5px solid rgba(222, 233, 1, 0.227);
+    border-radius: 40px;
 }
 
 .wrapper-description {
@@ -20,48 +30,49 @@
     
 }
 
-.film-foto {
+.product-foto {
     width: 25%;
+    border-radius: 20%;
+    object-fit: cover;
 }
 
-.film-title {
+.product-title {
     text-align: center;
     font-size: $titleBigCard;
     text-decoration: underline;
 }
 
-.film-year {
+.product-brand {
     margin-top: 20px;
 }
 
-.film-genre {
+.product-description {
     margin-top: 20px;
-}
-
-.film-description {
-    margin-top: 20px;
+    margin-bottom: 20px;
     width: 80%;
+    font-size: 18px
 }
 
 .btn-buy {
     width: 30%;
     height: 40px;
     margin-top: auto;
-    background-color: rgba(235, 165, 1, 0.838);
+    background-color: rgba(225, 29, 71, 0.748);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: all .3s ease;
+    align-self: center;
 
     &:hover {
-        background-color: rgba(211, 149, 3, 0.838);
+        background-color: rgba(200, 45, 79, 0.756);
         transform: translateY(-2px);
     }
 
     &:active {
-        background-color: rgba(103, 74, 4, 0.838);
+        background-color: rgba(130, 6, 33, 0.884);
         color: rgb(7, 233, 78);
 
     }

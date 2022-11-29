@@ -1,8 +1,8 @@
-@import './base';
+@import './base.scss';
 
 .wrapper {
     max-width: 1440px;
-    padding: calc(120 / 1440 * 100vw) 20px;
+    padding: calc(20 / 1440 * 100vw) 20px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;

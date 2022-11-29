@@ -1,17 +1,21 @@
-import './_cards.scss';
+import './cards.scss';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Cards({ image, name, popularity, imdb, id }) {
+function Cards({ thumbnail, name, category, id }) {
+
+    
+
     return (
         <>
             <div className='card'>
-                <button className='btn-favorite'></button>
-                <Link to={`Film/${id}`} className='linkCard'>
-                    <img className="card-foto" src={image} alt="img" />
+                <Link to={`Product/${id}`} className='linkCard'>
+                    <div className="card-foto">
+                        <img className="foto" src={thumbnail} alt="img" />
+                    </div>
                     <h1 className="card-title">{name}</h1>
-                    <div className="card-popular">Top: {popularity}</div>
-                    <div className="card-rating">Рейтинг: {imdb}</div>
+                    <button className="by-product">Купить</button>
+                    <div className="card-rating">Категория: {category}</div>
                 </Link>
             </div>
         </>

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
+
+.login-card {
+    height: calc(383 / 1440 * 100vw);
+    width: calc(600 / 1440 * 100vw);
+    box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.25);
+    margin: calc(125 / 1440 * 100vw) 28vw;
+    padding: calc(26 / 1440 * 100vw) calc(45 / 1440 * 100vw) calc(37 / 1440 * 100vw);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+
+
+		&__tittle {
+            text-align: center;
+            font-size: calc(50 / 1440 * 100vw);
+            color: rgba(0, 0, 0);
+            line-height: 1;
+		}
+
+		&__form-login {
+            display: flex;
+            flex-direction: column;
+            padding-top: calc(16 / 1440 * 100vw);
+		}
+
+		&__label-email {
+            margin: 0 0 calc(1 / 1440 * 100vw) calc(8 / 1440 * 100vw);
+            font-size: calc(16 / 1440 * 100vw);
+            color: rgba(0, 0, 0);
+		}
+
+		&__input-email {
+            height: calc(49 / 1440 * 100vw);
+            outline: none;
+            border: 1px solid rgba(0, 0, 0);
+            padding-left: calc(15 / 1440 * 100vw);
+            font-size: calc(28 / 1440 * 100vw);
+            color: rgba(0, 0, 0);
+            font-weight: bold;
+            margin-bottom: calc(11 / 1440 * 100vw);
+		}
+
+        &__input-email::placeholder {
+            color: rgba(204, 204, 204, 1);
+
+        }
+
+		&__label-password {
+            margin: 0 0 calc(3 / 1440 * 100vw) calc(8 / 1440 * 100vw);
+            font-size: calc(16 / 1440 * 100vw);
+            color: rgba(0, 0, 0);
+		}
+
+		&__input-password {
+            height: calc(49 / 1440 * 100vw);
+            outline: none;
+            border: 1px solid rgba(0, 0, 0);
+            padding-left: calc(15 / 1440 * 100vw);
+            font-size: calc(28 / 1440 * 100vw);
+            color: rgba(0, 0, 0);
+            font-weight: bold;
+            margin-bottom: calc(52 / 1440 * 100vw);
+		}
+
+        &__input-password::placeholder {
+            color: rgba(204, 204, 204, 1);
+        }
+
+		&__button {
+            width: calc(180 / 1440 * 100vw);
+            height: calc(52 / 1440 * 100vw);
+            background-color: #1A226B;
+            border: none;
+            cursor: pointer;
+            align-self: center;
+            font-size: calc(24 / 1440 * 100vw);
+            color: rgba(255, 255, 255, 1);
+
+		}
+}

@@ -1,19 +1,20 @@
-import './_header.scss';
+import './header.scss';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function Header() {
+function Header() {
 
     return (
         <header className="header">
             <img className="header__logo" src={require('../../img/header/tv.png')} alt="logo" />
-            <div className="header__tittle">MovieBox</div>
-            <div className="header__search">
-                <input type="text" placeholder="Поиск" />
-            </div>
+            <Link to={'/'} className="header__tittle">Fake Shop</Link>
             <div className="header__link">
-                <a href="/" className="header__login">Sign in</a>
-                <a href="/" className="header__login">Registration</a>
+                <Link to={'Basket'} className='basket-wrapper'><img  className='header__basket' src={require('../../img/header/basket.png')}/></Link>
+                <Link to={'Login'} className="header__login">Sign in</Link>
+                <Link to={'Registration'} className="header__login">Registration</Link>
             </div>
         </header>
     )
 };
+
+export default Header;

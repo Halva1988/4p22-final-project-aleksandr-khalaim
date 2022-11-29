@@ -1,0 +1,27 @@
+@import '../../components/style/color';
+@import '../../components/style/size';
+
+.search {
+    padding-top: calc(30 / 1440 * 100vw);
+    margin: 0 auto;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-self: center;
+  
+    input {
+      border: 1px solid $lightGrey;
+      color: $wight;
+      background: transparent;
+      border-radius: 15px;
+      padding-left: 10px;
+      height: calc(40 / 1440 * 100vw);
+      width: 100%;
+      font-size: $inputFontSizeSearch;
+      outline: none;
+      
+      &::placeholder {
+        color: $dark;
+      }
+    }
+  }

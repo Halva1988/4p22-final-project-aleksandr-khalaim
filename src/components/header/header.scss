@@ -1,10 +1,8 @@
-
-@import '../style/base';
+@import '../style/base.scss';
 @import '../style/color';
 @import '../style/size';
 
 .header {
-    position: fixed;
     width: 100%;
     height: calc(80 / 1440 * 100vw);
     padding: calc(18 / 1440 * 100vw) calc(27.36 / 1440 * 100vw) calc(12 / 1440 * 100vw) calc(30 / 1440 * 100vw);
@@ -22,28 +20,17 @@
         font-size: calc(36 / 1440 * 100vw);
         align-self: center;
         color: $wight;
+        text-decoration: none;
     }
 
-    &__search {
-        margin-left: auto;
-        width: 50%;
-        height: 100%;
-        display: flex;
-        align-self: center;
-      
-        input {
-          border: 1px solid $lightGrey;
-          color: $lightGrey;
-          background: transparent;
-          border-radius: 15px;
-          padding-left: 10px;
-          height: 100%;
-          width: 100%;
-          font-size: $inputFontSizeSearch;
-        }
-      }
+    &__basket {
+        width: 30px;
+        height: 30px;
+    }
 
     &__link {
+        display: flex;
+        align-items: center;
         margin-left: auto;
         align-self: center;
         font-size: calc(24 / 1440 * 100vw);
@@ -58,3 +45,6 @@
     }
 }
 
+.basket-wrapper {
+    display: flex;
+}
