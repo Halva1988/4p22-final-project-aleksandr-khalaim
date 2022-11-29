@@ -38,7 +38,7 @@ function DataProducts() {
                             thumbnail={item.thumbnail}
                             name={item.title}
                             category={item.category}
-                            popularity={item.rating}
+                            price={item.price}
                             id={item.id}
                         />
                     })

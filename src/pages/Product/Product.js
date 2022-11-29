@@ -2,8 +2,9 @@ import '../../components/style/base.scss'
 import './Product.scss'
 import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { increment, decrement } from '../../store/counter/counterSlice';
+import { addToBasket, removeFromBasket } from '../../store/basket/basketSlice';
 
 
 
@@ -12,13 +13,17 @@ function ProductPage() {
     const [product, setProduct] = useState({});
     const [images, setImages] = useState([]);
     const dispatch = useDispatch();
+    const productsIn = useSelector((state) => state.basket);
+    
 
-    const onClickIncrement = () => {
+    const onByClick = () => {
+        dispatch(addToBasket(productId));
         dispatch(increment());
-    };
+    }
 
-    const onClickDecrement = () => {
+    const onDeleteClick = () => {
         dispatch(decrement());
+        dispatch(removeFromBasket(productId));
     }
 
     useEffect(() => {
@@ -40,8 +45,14 @@ function ProductPage() {
                     <h3 className="product-brand"><span>Брэнд: </span>{product.brand}</h3>
                     <p className="product-description">{product.description}</p>
                     <div className='btn-wrapper'>
-                        <button onClick={onClickIncrement} className='btn-buy'>Купить: {`${product.price}`} $</button>
-                        <button onClick={onClickDecrement} className='btn-delete'>Удалить</button>
+                        {!productsIn[productId] && <button onClick={onByClick} className='btn-buy'>Купить: {`${product.price}`} $</button>}
+                        {productsIn[productId] && (
+                            <>
+                                <button onClick={onByClick} className='btn-plus btn'>+</button>
+                                {productsIn[productId]}
+                                <button onClick={onDeleteClick} className='btn-delete btn'>-</button>
+                            </>
+                        )}
                     </div>
                 </div>
             </div>
