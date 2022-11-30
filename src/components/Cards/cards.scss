@@ -85,6 +85,7 @@
     bottom: calc(30 / 1440 * 100vw);
     cursor: pointer;
     transition: all .3s ease;
+    font-size: calc(18 / 1440 * 100vw);
 
     &:active {
         background-color: rgb(255, 166, 0);

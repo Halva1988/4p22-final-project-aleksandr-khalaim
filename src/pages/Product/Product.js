@@ -49,7 +49,7 @@ function ProductPage() {
                         {productsIn[productId] && (
                             <>
                                 <button onClick={onByClick} className='btn-plus btn'>+</button>
-                                {productsIn[productId]}
+                                <h1>{productsIn[productId]}</h1>
                                 <button onClick={onDeleteClick} className='btn-delete btn'>-</button>
                             </>
                         )}

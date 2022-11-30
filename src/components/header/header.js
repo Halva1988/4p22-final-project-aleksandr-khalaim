@@ -13,11 +13,11 @@ function Header() {
             <div className="header__link">
                 <Link to={'Basket'} className='basket-wrapper'>
                     <img className='header__basket' src={require('../../img/header/basket.png')} />
-                    <b className='basketCount'>{Object.values(basket).reduce((acc, item) => {
+                    {Object.values(basket).length > 0 && <b className='basket-count'>{Object.values(basket).reduce((acc, item) => {
                         acc += item;
                         return acc;
                     }, 0)}
-                    </b>
+                    </b>}
                     </Link>
                 <Link to={'Login'} className="header__login">Sign in</Link>
                 <Link to={'Registration'} className="header__login">Registration</Link>

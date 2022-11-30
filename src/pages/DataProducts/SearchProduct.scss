@@ -4,10 +4,20 @@
 .search {
     padding-top: calc(30 / 1440 * 100vw);
     margin: 0 auto;
-    width: 50%;
+    width: 80%;
     height: 100%;
     display: flex;
     align-self: center;
+
+    select {
+      width: 20%;
+      margin-right: 20px;
+      outline: none;
+      background-color: #fff;
+      border: 1px solid #6f6f6f;
+      border-radius: calc(10 / 1440 * 100vw);
+
+    }
   
     input {
       border: 1px solid $lightGrey;
@@ -16,9 +26,11 @@
       border-radius: 15px;
       padding-left: 10px;
       height: calc(40 / 1440 * 100vw);
-      width: 100%;
+      width: 80%;
       font-size: $inputFontSizeSearch;
       outline: none;
+      color: $dark;
+      font-weight: 700;
       
       &::placeholder {
         color: $dark;

@@ -51,10 +51,11 @@
     position: relative;
 }
 
-.basketCount {
+.basket-count {
     position: absolute;
+    font-size: calc(14 / 1440 * 100vw);
     color: red;
-    left: calc(-20 / 1440 * 100vw);
+    left: calc(-13 / 1440 * 100vw);
     top: calc(-9 / 1440 * 100vw);
     cursor: default;
 }
