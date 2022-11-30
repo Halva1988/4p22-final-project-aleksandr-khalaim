@@ -34,7 +34,7 @@ function DataProducts() {
     return (
         <>
             <div className="search">
-                <select onChange={onChangeCategory} name="filtrCategory" className="filterCategory">
+                <select onChange={onChangeCategory} name="filter-category" className="filterCategory">
                     {category.map((item, index) => (
                         <option key={index} value={item}>{item}</option>
                     ))}
@@ -77,7 +77,7 @@ function DataProducts() {
                 }
             </div>
         </>
-    )
+    );
 };
 
 export default DataProducts;
