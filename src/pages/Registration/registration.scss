@@ -151,7 +151,21 @@
             margin-bottom: calc(18.576 / 1440 * 100vw);
 		}
 
+        &__foto {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                margin-bottom: calc(10 / 1440 * 100vw);
+            }
+
+            input {
+                font-size: calc(10 / 1440 * 100vw);
+            }
+        }
+
 		&__checkbox {
+            margin-top: calc(10 / 1440 * 100vw);
             margin-bottom: calc(51.84 / 1440 * 100vw);
 
 		}

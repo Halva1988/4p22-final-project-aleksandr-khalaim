@@ -1,24 +1,25 @@
 import './SearchProduct.scss'
 import React from 'react';
 import Cards from '../../components/Cards/Cards';
+import { useDispatch, useSelector } from 'react-redux';
+import { getProducts } from '../../store/products/productsSlice';
+
 
 function DataProducts() {
-    const [products, setProducts] = React.useState([]);
+    const [products, isLoading] = useSelector((state) => [state.products.entities, state.products.isLoading]);
+    const dispatch = useDispatch();
     const [searchValue, setSearchValue] = React.useState('');
     const [chooseCategory, setChooseCategory] = React.useState('');
     const [category, setCategory] = React.useState([]);
 
 
     React.useEffect(() => {
-        (async () => {
-            const response = await fetch(`https://dummyjson.com/products`);
-            const result = await response.json();
-            const allCategory = Array.from(new Set(result.products.map((item) => item.category)))
-            allCategory.unshift('all');
-            setCategory(allCategory);
-            setProducts(result.products);
 
-        })();
+        dispatch(getProducts());
+
+        const allCategory = Array.from(new Set(products.map((item) => item.category)));
+        allCategory.unshift('all');
+        setCategory(allCategory);
 
     }, []);
 
@@ -42,12 +43,12 @@ function DataProducts() {
             </div>
             <div className="wrapper">
                 {
-                    products.filter((obj) => {
+                    !isLoading && products.filter((obj) => {
                         const productCategory = (obj.category);
                         if (chooseCategory === 'all') {
                             return products
                         }
-                        
+
                         return (
                             productCategory.includes(chooseCategory)
                         )
@@ -69,6 +70,10 @@ function DataProducts() {
                         />
 
                     })
+                }
+                {
+                    isLoading && 
+                        <h1>Подождите, идёт загрузка.... </h1>
                 }
             </div>
         </>

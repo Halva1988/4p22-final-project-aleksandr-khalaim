@@ -186,6 +186,10 @@ function FormRegistration() {
                 <textarea className="textarea-comment__textarea" name="comment" id="comment"
                     placeholder="Расскажите о себе..."></textarea>
             </div>
+            <div className="registration-card__foto">
+                <span className="foto__span">Вставте фото</span>
+                <input type="file" name="photo" accept="image/*,image/jpeg" />
+            </div>
             <div className="registration-card__checkbox">
                 <input className="checkbox__input-checkbox" type="checkbox" id="checkbox" name="checkbox" value="TRUE" />
                 <label className="checkbox__label-checkbox" htmlFor="checkbox">Я согласен получать обновления на

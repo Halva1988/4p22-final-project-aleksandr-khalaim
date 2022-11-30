@@ -44,6 +44,7 @@ function ProductPage() {
                     <h1 className="product-title">{product.title}</h1>
                     <h3 className="product-brand"><span>Брэнд: </span>{product.brand}</h3>
                     <p className="product-description">{product.description}</p>
+                    <h2 className="product-price">{product.price} $</h2>
                     <div className='btn-wrapper'>
                         {!productsIn[productId] && <button onClick={onByClick} className='btn-buy'>Купить: {`${product.price}`} $</button>}
                         {productsIn[productId] && (

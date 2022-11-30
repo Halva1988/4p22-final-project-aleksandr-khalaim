@@ -18,7 +18,7 @@ function Cards({ thumbnail, name, category, id, price }) {
     return (
         <>
             <div className='card'>
-                <Link to={`Product/${id}`} className='linkCard'>
+                <Link to={`/Product/${id}`} className='linkCard'>
                     <div className="card-foto">
                         <img className="foto" src={thumbnail} alt="img" />
                     </div>
