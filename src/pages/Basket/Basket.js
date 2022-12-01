@@ -44,7 +44,8 @@ function Basket() {
                     return acc;
                 }, 0)}</h1>}
                 
-                 <button onClick={onClearClick} className="clear-btn">Очистить корзину</button> 
+                 {Object.values(basket).length > 0 && <button onClick={onClearClick} className="clear-btn">Очистить корзину</button>} 
+                 {Object.values(basket).length === 0 && <h1 className='basket-empty'>Корзина пуста</h1>} 
             </div>
         </>
     )

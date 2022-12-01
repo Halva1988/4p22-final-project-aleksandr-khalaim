@@ -37,27 +37,30 @@ function ProductPage() {
 
 
     return (
-        <div className="wrapper-product">
-            <div className='product-border'>
-                <img className="product-foto" src={images[0]} alt="img" />
-                <div className="wrapper-description">
-                    <h1 className="product-title">{product.title}</h1>
-                    <h3 className="product-brand"><span>Брэнд: </span>{product.brand}</h3>
-                    <p className="product-description">{product.description}</p>
-                    <h2 className="product-price">{product.price} $</h2>
-                    <div className='btn-wrapper'>
-                        {!productsIn[productId] && <button onClick={onByClick} className='btn-buy'>Купить: {`${product.price}`} $</button>}
-                        {productsIn[productId] && (
-                            <>
-                                <button onClick={onByClick} className='btn-plus btn'>+</button>
-                                <h1>{productsIn[productId]}</h1>
-                                <button onClick={onDeleteClick} className='btn-delete btn'>-</button>
-                            </>
-                        )}
+        <>
+            {product.images && <div className="wrapper-product">
+                <div className='product-border'>
+                    <img className="product-foto" src={images[0]} alt="img" />
+                    <div className="wrapper-description">
+                        <h1 className="product-title">{product.title}</h1>
+                        <h3 className="product-brand"><span>Брэнд: </span>{product.brand}</h3>
+                        <p className="product-description">{product.description}</p>
+                        <h2 className="product-price">{product.price} $</h2>
+                        <div className='btn-wrapper'>
+                            {!productsIn[productId] && <button onClick={onByClick} className='btn-buy'>Купить: {`${product.price}`} $</button>}
+                            {productsIn[productId] && (
+                                <>
+                                    <button onClick={onByClick} className='btn-plus btn'>+</button>
+                                    <h1>{productsIn[productId]}</h1>
+                                    <button onClick={onDeleteClick} className='btn-delete btn'>-</button>
+                                </>
+                            )}
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div>}
+            {!product.images && <div className='wrapper-border'><h1 className='loading-image'>Идёт загрузка...</h1></div>}
+        </>
     )
 }
 

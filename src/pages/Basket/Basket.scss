@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
+
 .clear-btn {
 
     width: 20%;
@@ -6,9 +8,10 @@
     background-color: rgba(221, 78, 1, 0.781);
     border-radius: 8px;
     align-self: center;
-    bottom: calc(30 / 1440 * 100vw);
     cursor: pointer;
     transition: all .3s ease;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
     font-size: calc(24 / 1440 * 100vw);
     position: absolute;
     right: 40%;
@@ -23,9 +26,12 @@
 }
 
 .total-price {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
     font-size: calc(24 / 1440 * 100vw);
+    margin-left: calc(10 / 1440 * 100vw);
 }
 
-.disabled-link {
-    pointer-events: none;
+.basket-empty {
+    text-align: center;
 }
