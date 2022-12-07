@@ -10,10 +10,3 @@
     gap: calc(40 / 1440 * 100vw);
 }
 
-
-@media (max-width: 1024px) {
-    .wrapper {
-        column-gap: calc(100 / 1024 * 100vw);
-        padding: calc(120 / 1024 * 100vw) calc(80 / 1024 * 100vw);
-    }
-}
