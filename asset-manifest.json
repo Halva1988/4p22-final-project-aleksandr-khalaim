@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/4p22-final-project-aleksandr-khalaim/static/css/main.a0c3760e.css",
-    "main.js": "/4p22-final-project-aleksandr-khalaim/static/js/main.073afba1.js",
-    "static/media/background.jpg": "/4p22-final-project-aleksandr-khalaim/static/media/background.734327ea0eea23b9cd77.jpg",
-    "static/media/basket.png": "/4p22-final-project-aleksandr-khalaim/static/media/basket.f9a621f0aa9ffb08089b.png",
-    "index.html": "/4p22-final-project-aleksandr-khalaim/index.html",
-    "main.a0c3760e.css.map": "/4p22-final-project-aleksandr-khalaim/static/css/main.a0c3760e.css.map",
-    "main.073afba1.js.map": "/4p22-final-project-aleksandr-khalaim/static/js/main.073afba1.js.map"
+    "main.css": "/Fake_Shop-React/static/css/main.7fac6413.css",
+    "main.js": "/Fake_Shop-React/static/js/main.bc330496.js",
+    "static/media/background.jpg": "/Fake_Shop-React/static/media/background.734327ea0eea23b9cd77.jpg",
+    "static/media/basket.png": "/Fake_Shop-React/static/media/basket.f9a621f0aa9ffb08089b.png",
+    "index.html": "/Fake_Shop-React/index.html",
+    "main.7fac6413.css.map": "/Fake_Shop-React/static/css/main.7fac6413.css.map",
+    "main.bc330496.js.map": "/Fake_Shop-React/static/js/main.bc330496.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0c3760e.css",
-    "static/js/main.073afba1.js"
+    "static/css/main.7fac6413.css",
+    "static/js/main.bc330496.js"
   ]
 }
